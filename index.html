@@ -231,7 +231,7 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   font-family:"Cinzel",Georgia,serif;
   font-size:13px;
   font-weight:700;
-  line-height:1.5;
+  line-height:1.55;
   letter-spacing:.15em;
   color:var(--wine);
   border-top:1px solid var(--gold);
@@ -585,9 +585,11 @@ var CONFIG = {
   function parse(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");return m?new Date(+m[1],+m[2]-1,+m[3]):null;}
   function fmt(d,short){var x=parse(d);if(!x)return "Date to be announced";return (short?"":DAYS[x.getDay()]+", ")+ord(x.getDate())+" "+MONTHS[x.getMonth()]+" "+x.getFullYear();}
   function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function noBreakPostcode(pc){return esc(String(pc||"").trim()).replace(/\s+/g,"\u00A0");}
 
   var fullVenue = C.venueName + ", " + C.venuePostcode + ", " + C.venueCityRegion;
-  var shortVenueLine = C.venueName + ", Bradford · " + C.venuePostcode;
+  var shortVenueLine = C.venueName + ", Bradford · " + noBreakPostcode(C.venuePostcode);
+  var stackedVenueHTML = esc(C.venueName.toUpperCase()) + "<br>" + esc("BRADFORD") + " · " + noBreakPostcode(C.venuePostcode.toUpperCase());
 
   var wd = parse(C.weddingDate);
   var big = wd ? ("TUESDAY " + ord(wd.getDate()).toUpperCase() + " " + MONTHS[wd.getMonth()].toUpperCase() + " " + wd.getFullYear()) : "DATE TO BE ANNOUNCED";
@@ -625,7 +627,7 @@ var CONFIG = {
       '<span class="d-main">' + esc(big) + '</span>' +
       '<span class="d-time">' + esc(C.eventTimeRange.toUpperCase()) + ' · BARAAT</span>' +
     '</div>' +
-    '<div class="subvenue">' + esc(shortVenueLine) + '</div>' +
+    '<div class="subvenue">' + shortVenueLine + '</div>' +
     '<div class="scroll-cue">Scroll Down ↓</div>' +
   '</section>';
 
@@ -637,7 +639,7 @@ var CONFIG = {
     '<div class="invite-highlight">' + esc(C.bride.toUpperCase()) + '</div>' +
     '<p class="invite-body" style="font-style:italic;margin:2px auto">' + esc(C.inviteBridge) + '</p>' +
     '<div class="invite-highlight">' + esc(C.groom.toUpperCase()) + '</div>' +
-    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + esc(shortVenueLine.toUpperCase()) + '</span></div>' +
+    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + stackedVenueHTML + '</span></div>' +
     '<p class="invite-body">' + esc(C.inviteParagraph1) + '</p>' +
     '<p class="invite-body">' + esc(C.inviteParagraph2) + '</p>' +
     '<p class="invite-dua">' + esc(C.inviteSignOff) + '</p>' +
@@ -676,7 +678,7 @@ var CONFIG = {
     '<div class="cap">The Setting</div>' +
     '<h2>Wedding Venue</h2>' +
     '<h3>' + esc(C.venueName) + '</h3>' +
-    '<p class="muted">' + esc(C.venuePostcode + ", " + C.venueCityRegion) + '</p>' +
+    '<p class="muted">' + noBreakPostcode(C.venuePostcode) + ", " + esc(C.venueCityRegion) + '</p>' +
     '<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(C.mapQuery) + '">VIEW ON GOOGLE MAPS</a>' +
   '</section>';
 
@@ -684,7 +686,7 @@ var CONFIG = {
     '<div class="cap">Kindly Reply</div>' +
     '<h2>Will You Join Us?</h2>' +
     '<p class="rl">' + esc(C.rsvpMessage) + '</p>' +
-    '<div class="rsum"><b>' + esc(fmt(C.weddingDate)) + ' · ' + esc(C.eventTimeRange) + '</b><span>' + esc(shortVenueLine) + '</span></div>' +
+    '<div class="rsum"><b>' + esc(fmt(C.weddingDate)) + ' · ' + esc(C.eventTimeRange) + '</b><span>' + shortVenueLine + '</span></div>' +
     '<form id="f">' +
       '<label for="fn">GUEST FULL NAME</label>' +
       '<input id="fn" required autocomplete="name" value="' + esc(guestName) + '" placeholder="Enter your full name">' +
@@ -713,9 +715,13 @@ var CONFIG = {
   h += '<section>' +
     '<div class="motif">' + ornamentSVG + '</div>' +
     '<div class="cap">Save The Date</div>' +
-    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + esc(shortVenueLine.toUpperCase()) + '</span></div>' +
+    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + stackedVenueHTML + '</span></div>' +
     '<p style="margin-top:16px">' + esc(C.closing) + '</p>' +
-    '<div class="names gold-foil" style="font-size:38px;filter:none">' + esc(C.bride) + ' &amp; ' + esc(C.groom) + '</div>' +
+    '<div class="names gold-foil" style="font-size:40px;line-height:1.15;filter:none">' +
+      esc(C.bride) +
+      '<span class="bridge" style="color:var(--rose);-webkit-text-fill-color:var(--rose);font-size:20px;margin:2px auto">&amp;</span>' +
+      esc(C.groom) +
+    '</div>' +
   '</section>';
 
   document.getElementById("app").innerHTML = h;
