@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Saira Iqbal &amp; Uzair Hussain — Baraat Invitation</title>
+<title>Saira &amp; Uzair — Baraat Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500;1,600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -75,7 +75,6 @@ section{
   backdrop-filter:blur(10px);
 }
 
-/* Hero layout tuned for single first names ("Saira" & "Uzair") */
 section.hero{
   min-height:84vh;
   background:
@@ -243,6 +242,24 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   line-height:1.38;
   margin:8px auto;
   max-width:280px;
+}
+
+.closing-names{
+  font-size:52px;
+  line-height:1.08;
+  margin:10px auto 4px;
+  padding:4px 10px;
+  filter:none;
+}
+.closing-names .amp{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;
+  font-size:21px;
+  line-height:1.2;
+  display:block;
+  margin:4px auto;
+  color:var(--rose);
+  -webkit-text-fill-color:var(--rose);
 }
 
 .hero-datebox{
@@ -765,15 +782,16 @@ var CONFIG = {
     '<div id="ty" hidden></div>' +
   '</section>';
 
+  /* Save The Date / Closing section: Saira & Uzair */
   h += '<section>' +
     '<div class="motif">' + ornamentSVG + '</div>' +
     '<div class="cap">Save The Date</div>' +
     '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + stackedVenueHTML + '</span></div>' +
     '<p style="margin-top:16px">' + esc(C.closing) + '</p>' +
-    '<div class="names gold-foil" style="font-size:40px;line-height:1.15;filter:none">' +
-      esc(C.bride) +
-      '<span class="bridge" style="color:var(--rose);-webkit-text-fill-color:var(--rose);font-size:20px;margin:2px auto">&amp;</span>' +
-      esc(C.groom) +
+    '<div class="names gold-foil closing-names">' +
+      'Saira' +
+      '<span class="amp">&amp;</span>' +
+      'Uzair' +
     '</div>' +
   '</section>';
 
