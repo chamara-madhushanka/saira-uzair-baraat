@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Saira Iqbal &amp; Uzair Husain — Baraat Invitation</title>
+<title>Saira Iqbal &amp; Uzair Hussain — Baraat Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500;1,600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -60,11 +60,12 @@ section{
   background:linear-gradient(180deg, rgba(255,253,249,0.95) 0%, rgba(251,243,230,0.92) 100%);
   border:1.5px solid var(--gold);
   border-radius:140px 140px 24px 24px;
-  padding:68px 24px 44px;
+  padding:64px 24px 44px;
   margin-bottom:22px;
   display:flex;
   flex-direction:column;
   align-items:center;
+  text-align:center;
   box-shadow:
     0 20px 45px rgba(45,6,12,0.32),
     inset 0 0 0 5px rgba(255,253,249,0.95),
@@ -101,7 +102,7 @@ section.hero::after{
   pointer-events:none;
   z-index:0;
 }
-section.hero > *{position:relative;z-index:1}
+section.hero > *{position:relative;z-index:1;max-width:100%}
 
 .hero-crown{
   color:var(--gold-light);
@@ -150,41 +151,47 @@ section.hero > *{position:relative;z-index:1}
   box-shadow:0 4px 16px rgba(0,0,0,0.22);
 }
 
-h2,h3,.cap{font-family:"Cinzel",Georgia,serif;margin:0}
+h2,h3,.cap{font-family:"Cinzel",Georgia,serif;margin:0;text-align:center}
 h2{
   font-family:"Cinzel Decorative","Cinzel",Georgia,serif;
-  font-size:21px;
+  font-size:20.5px;
+  line-height:1.35;
   letter-spacing:.08em;
-  margin:4px 0 14px;
+  margin:4px auto 14px;
   color:var(--wine);
+  max-width:340px;
 }
-h3{font-size:16px;letter-spacing:.12em;margin:0 0 4px;color:var(--rose)}
+h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
 
 .cap{
   font-size:10.5px;
   font-weight:700;
-  letter-spacing:.28em;
+  letter-spacing:.26em;
   color:var(--gold-dark);
   text-transform:uppercase;
-  margin:8px 0;
+  margin:6px auto;
+  max-width:340px;
 }
 .hero .cap{color:var(--gold-light);opacity:0.95}
 
 .names{
   font-family:"Great Vibes",cursive;
-  font-size:56px;
-  line-height:1.08;
-  margin:6px 0;
-  padding:4px 10px;
+  font-size:54px;
+  line-height:1.1;
+  margin:6px auto;
+  padding:4px 8px;
+  max-width:100%;
   filter:drop-shadow(0 4px 10px rgba(0,0,0,0.45));
 }
 .names .bridge{
   font-family:"Cormorant Garamond",Georgia,serif;
   font-style:italic;
-  font-size:18.5px;
+  font-size:18px;
+  line-height:1.35;
   letter-spacing:0.03em;
   display:block;
-  margin:4px 0 6px;
+  margin:6px auto;
+  max-width:300px;
   color:#f9e8c9;
   -webkit-text-fill-color:#f9e8c9;
 }
@@ -192,53 +199,60 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 4px;color:var(--rose)}
 .hero-datebox{
   width:100%;
   max-width:340px;
+  margin:10px auto 0;
   border-top:1px solid rgba(235,209,151,0.6);
   border-bottom:1px solid rgba(235,209,151,0.6);
   padding:12px 14px;
-  margin-top:10px;
   background:linear-gradient(90deg, transparent, rgba(0,0,0,0.24), transparent);
 }
 .hero-datebox .d-main{
   font-family:"Cinzel",Georgia,serif;
-  font-size:13.5px;
+  font-size:13px;
   font-weight:700;
-  letter-spacing:.17em;
+  letter-spacing:.15em;
   color:var(--gold-light);
   display:block;
+  line-height:1.4;
 }
 .hero-datebox .d-time{
   font-family:"Cinzel",Georgia,serif;
-  font-size:11.5px;
+  font-size:11px;
   font-weight:600;
-  letter-spacing:.22em;
+  letter-spacing:.18em;
   color:#f7e7ce;
   display:block;
-  margin-top:5px;
+  margin-top:6px;
+  line-height:1.4;
 }
 
 .bigdate{
+  width:100%;
+  max-width:340px;
   font-family:"Cinzel",Georgia,serif;
-  font-size:13.5px;
+  font-size:13px;
   font-weight:700;
-  letter-spacing:.18em;
+  line-height:1.5;
+  letter-spacing:.15em;
   color:var(--wine);
   border-top:1px solid var(--gold);
   border-bottom:1px solid var(--gold);
-  padding:11px 18px;
-  margin-top:14px;
+  padding:11px 14px;
+  margin:14px auto;
   background:rgba(197,155,73,0.08);
 }
 
 .subvenue{
   font-size:17.5px;
+  line-height:1.4;
   color:#f3dec0;
-  margin-top:10px;
+  margin:10px auto 0;
+  max-width:330px;
   font-style:italic;
-  letter-spacing:0.04em;
+  letter-spacing:0.03em;
 }
 
 .scroll-cue{
-  margin-top:14px;
+  margin:14px auto 0;
   font-family:"Cinzel",Georgia,serif;
   font-size:9px;
   letter-spacing:.26em;
@@ -252,32 +266,53 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 4px;color:var(--rose)}
   50%{transform:translateY(4px);opacity:1}
 }
 
-p{margin:8px 0;line-height:1.65}
+p{margin:8px auto;line-height:1.65;max-width:350px}
 .muted{color:var(--muted)}
 
 .invite-lead{
+  width:100%;
+  max-width:340px;
   font-family:"Cinzel",Georgia,serif;
-  font-size:13px;
+  font-size:12.5px;
   font-weight:700;
-  letter-spacing:.14em;
+  letter-spacing:.13em;
   color:var(--rose);
   line-height:1.65;
-  margin-bottom:12px;
-  padding-bottom:10px;
-  border-bottom:1px dashed rgba(197,155,73,0.5);
+  margin:4px auto 14px;
+  padding-bottom:12px;
+  border-bottom:1px dashed rgba(197,155,73,0.55);
 }
-.invite-body{font-size:19px;line-height:1.7;color:var(--ink)}
+.invite-body{
+  width:100%;
+  max-width:345px;
+  font-size:19px;
+  line-height:1.68;
+  color:var(--ink);
+  margin:6px auto;
+}
 .invite-highlight{
+  width:100%;
+  max-width:340px;
   font-family:"Cinzel Decorative","Cinzel",Georgia,serif;
-  font-size:21px;
+  font-size:20px;
+  line-height:1.35;
   font-weight:700;
   color:var(--wine);
-  margin:6px 0;
+  margin:6px auto;
   letter-spacing:0.06em;
 }
-.invite-dua{font-style:italic;font-weight:600;font-size:20px;color:var(--rose);margin-top:14px}
+.invite-dua{
+  width:100%;
+  max-width:340px;
+  font-style:italic;
+  font-weight:600;
+  font-size:19.5px;
+  line-height:1.55;
+  color:var(--rose);
+  margin:14px auto 0;
+}
 
-.count{display:flex;gap:10px;margin:14px 0}
+.count{display:flex;justify-content:center;gap:10px;margin:14px auto;max-width:100%}
 .count div{
   border:1.5px solid var(--gold);
   border-radius:46px 46px 14px 14px;
@@ -290,17 +325,18 @@ p{margin:8px 0;line-height:1.65}
 
 .ev{
   width:100%;
+  max-width:360px;
   border:1.5px solid var(--gold);
   border-radius:70px 70px 16px 16px;
   padding:26px 18px 20px;
-  margin-bottom:14px;
+  margin:0 auto 14px;
   background:linear-gradient(180deg, #fffdf9 0%, #f8ebd8 100%);
 }
 
 .btn{
   display:inline-block;
   margin-top:16px;
-  padding:14px 30px;
+  padding:14px 28px;
   border-radius:999px;
   border:1.5px solid var(--gold-light);
   background:linear-gradient(135deg, #8e243a 0%, #591120 100%);
@@ -325,7 +361,7 @@ p{margin:8px 0;line-height:1.65}
 }
 @keyframes shine{0%,55%{left:-65%}100%{left:135%}}
 
-form{width:100%;display:flex;flex-direction:column;gap:12px;margin-top:10px}
+form{width:100%;max-width:360px;display:flex;flex-direction:column;gap:12px;margin:10px auto 0}
 input,select,textarea{
   width:100%;
   padding:13px 14px;
@@ -338,7 +374,6 @@ input,select,textarea{
 textarea{min-height:84px;resize:vertical}
 label{text-align:left;font-family:"Cinzel",Georgia,serif;font-size:10px;font-weight:700;letter-spacing:.16em;color:var(--wine)}
 
-/* Floating Music Control Button */
 .music-btn{
   position:fixed;
   top:calc(16px + env(safe-area-inset-top,0px));
@@ -400,7 +435,7 @@ body.go .hero>*:nth-child(8){animation-delay:1.15s}
 .rv.in>*:nth-child(5){transition-delay:.4s}
 .rv.in>*:nth-child(6){transition-delay:.5s}
 
-.motif{color:var(--gold);margin-bottom:6px}
+.motif{color:var(--gold);margin:0 auto 6px;display:flex;justify-content:center}
 .motif path{stroke-dasharray:220;stroke-dashoffset:220;transition:stroke-dashoffset 2.2s ease .2s}
 .in .motif path{stroke-dashoffset:0}
 #cs{animation:beat 1s ease-in-out infinite}
@@ -460,15 +495,15 @@ body.go .hero>*:nth-child(8){animation-delay:1.15s}
   font-size:16px;
   color:var(--rose);
   -webkit-text-fill-color:var(--rose);
-  margin:2px 0;
+  margin:4px auto;
 }
 .intro.open{opacity:0;transform:scale(1.16);filter:blur(8px);pointer-events:none}
 html.lock{overflow:hidden}
 @keyframes float{from{transform:translateY(-6px)}to{transform:translateY(6px)}}
 
 [hidden]{display:none!important}
-.rl{max-width:360px;margin:6px 0 4px}
-.rsum{width:100%;display:flex;flex-direction:column;gap:3px;margin:14px 0 6px;padding:13px 14px;border:1px solid var(--gold);border-radius:14px;background:#fffdf9}
+.rl{max-width:340px;margin:6px auto 4px}
+.rsum{width:100%;max-width:340px;display:flex;flex-direction:column;gap:3px;margin:14px auto 6px;padding:13px 14px;border:1px solid var(--gold);border-radius:14px;background:#fffdf9}
 .rsum b{font-family:"Cinzel",Georgia,serif;font-weight:700;font-size:12px;letter-spacing:.14em;color:var(--wine)}
 .rsum span{font-size:16px;color:var(--muted)}
 .opts{display:flex;flex-wrap:wrap;gap:8px}
@@ -480,8 +515,8 @@ html.lock{overflow:hidden}
 .step{display:flex;align-items:center;justify-content:center;gap:18px}
 .step button{width:42px;height:42px;padding:0;border-radius:50%;border:1px solid var(--gold);background:#fffdf9;color:var(--wine);font-size:22px;line-height:1;cursor:pointer}
 .step output{min-width:42px;font-family:"Cinzel",Georgia,serif;font-size:22px;font-weight:700;text-align:center;color:var(--wine)}
-.rh{font-size:15px;margin:2px 0 0}
-#ty{width:100%;display:flex;flex-direction:column;align-items:center;margin-top:10px}
+.rh{font-size:15px;margin:2px auto 0}
+#ty{width:100%;max-width:340px;display:flex;flex-direction:column;align-items:center;margin:10px auto 0}
 #ty h3{margin:6px 0}
 .lnk{margin-top:14px;padding:4px;background:none;border:0;color:var(--muted);font:inherit;font-size:16px;text-decoration:underline;cursor:pointer}
 </style>
@@ -506,15 +541,13 @@ html.lock{overflow:hidden}
 </nav>
 
 <script>
-/* ============================================================
-   EDITABLE CONFIGURATION BLOCK (AMENDABLE DETAILS)
-   ============================================================ */
 var CONFIG = {
   bride: "Saira Iqbal",
-  groom: "Uzair Husain",
+  groom: "Uzair Hussain",
 
   weddingDate: "2026-12-29",
-  eventTime: "17:00", // 5:00 PM
+  eventTime: "17:00",
+  eventTimeRange: "5:00 PM – 10:00 PM",
 
   inviteHeadline: "A BEAUTIFUL BEGINNING, A LOVE TO LAST A LIFETIME",
   inviteIntro: "With hearts full of love and gratitude, and the blessings of Allah, we warmly invite you to join us in celebrating the Baraat of our beloved",
@@ -524,16 +557,17 @@ var CONFIG = {
   inviteSignOff: "With love, and a lifetime of duas for their happiness.",
 
   events: [
-    { name: "Baraat Ceremony & Reception", date: "2026-12-29", time: "17:00" }
+    { name: "Baraat Ceremony & Reception", date: "2026-12-29", timeRange: "5:00 PM – 10:00 PM" }
   ],
 
   venueName: "Walton View Hotel",
-  venueAddress: "Bradford, West Yorkshire, UK",
-  mapQuery: "Walton View Hotel Bradford",
+  venuePostcode: "BD4 0RY",
+  venueCityRegion: "Bradford, West Yorkshire, UK",
+  mapQuery: "Walton View Hotel BD4 0RY Bradford",
 
   rsvpMessage: "Your presence would mean the world to us. Please let us know if you can join the celebration.",
   rsvpMaxGuests: 10,
-  rsvpWhatsApp: "447301952588", // +44 7301 952588
+  rsvpWhatsApp: "447988707891",
   closing: "We look forward to celebrating this blessed occasion with you."
 };
 
@@ -550,8 +584,10 @@ var CONFIG = {
   function ord(n){var s=["th","st","nd","rd"],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0]);}
   function parse(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");return m?new Date(+m[1],+m[2]-1,+m[3]):null;}
   function fmt(d,short){var x=parse(d);if(!x)return "Date to be announced";return (short?"":DAYS[x.getDay()]+", ")+ord(x.getDate())+" "+MONTHS[x.getMonth()]+" "+x.getFullYear();}
-  function clock(t){var m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";var h=+m[1];return ((h+11)%12+1)+":"+m[2]+" "+(h<12?"AM":"PM");}
   function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+  var fullVenue = C.venueName + ", " + C.venuePostcode + ", " + C.venueCityRegion;
+  var shortVenueLine = C.venueName + ", Bradford · " + C.venuePostcode;
 
   var wd = parse(C.weddingDate);
   var big = wd ? ("TUESDAY " + ord(wd.getDate()).toUpperCase() + " " + MONTHS[wd.getMonth()].toUpperCase() + " " + wd.getFullYear()) : "DATE TO BE ANNOUNCED";
@@ -587,9 +623,9 @@ var CONFIG = {
     '</div>' +
     '<div class="hero-datebox">' +
       '<span class="d-main">' + esc(big) + '</span>' +
-      '<span class="d-time">AT ' + esc(clock(C.eventTime)) + ' · BARAAT</span>' +
+      '<span class="d-time">' + esc(C.eventTimeRange.toUpperCase()) + ' · BARAAT</span>' +
     '</div>' +
-    '<div class="subvenue">' + esc(C.venueName) + ', Bradford</div>' +
+    '<div class="subvenue">' + esc(shortVenueLine) + '</div>' +
     '<div class="scroll-cue">Scroll Down ↓</div>' +
   '</section>';
 
@@ -599,9 +635,9 @@ var CONFIG = {
     '<p class="invite-lead">' + esc(C.inviteHeadline) + '</p>' +
     '<p class="invite-body">' + esc(C.inviteIntro) + '</p>' +
     '<div class="invite-highlight">' + esc(C.bride.toUpperCase()) + '</div>' +
-    '<p class="invite-body" style="font-style:italic;margin:2px 0">' + esc(C.inviteBridge) + '</p>' +
+    '<p class="invite-body" style="font-style:italic;margin:2px auto">' + esc(C.inviteBridge) + '</p>' +
     '<div class="invite-highlight">' + esc(C.groom.toUpperCase()) + '</div>' +
-    '<div class="bigdate" style="margin:14px 0">' + esc(big) + '<br><span style="font-size:11.5px;letter-spacing:.15em">' + esc(C.venueName.toUpperCase()) + ', BRADFORD</span></div>' +
+    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + esc(shortVenueLine.toUpperCase()) + '</span></div>' +
     '<p class="invite-body">' + esc(C.inviteParagraph1) + '</p>' +
     '<p class="invite-body">' + esc(C.inviteParagraph2) + '</p>' +
     '<p class="invite-dua">' + esc(C.inviteSignOff) + '</p>' +
@@ -624,8 +660,7 @@ var CONFIG = {
     '<div class="cap">Celebrate with us</div>' +
     '<h2>The Baraat</h2>' +
     C.events.map(function(e){
-      var t = clock(e.time);
-      return '<div class="ev"><h3>' + esc(e.name) + '</h3><p><b>' + esc(fmt(e.date,false)) + '</b>' + (t ? ' at <b>' + t + '</b>' : '') + '</p><p class="muted">' + esc(C.venueName) + ', ' + esc(C.venueAddress) + '</p></div>';
+      return '<div class="ev"><h3>' + esc(e.name) + '</h3><p><b>' + esc(fmt(e.date,false)) + '</b></p><p><b>' + esc(e.timeRange || C.eventTimeRange) + '</b></p><p class="muted">' + esc(fullVenue) + '</p></div>';
     }).join('');
 
   if(wd){
@@ -633,7 +668,7 @@ var CONFIG = {
     var ds = wd.getFullYear()+p(wd.getMonth()+1)+p(wd.getDate());
     var nx = new Date(wd.getTime()+86400000);
     var de = nx.getFullYear()+p(nx.getMonth()+1)+p(nx.getDate());
-    h += '<a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(C.bride + " & " + C.groom + " Baraat") + '&dates=' + ds + '/' + de + '&location=' + encodeURIComponent(C.venueName + ", " + C.venueAddress) + '">SAVE TO CALENDAR</a>';
+    h += '<a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(C.bride + " & " + C.groom + " Baraat") + '&dates=' + ds + '/' + de + '&location=' + encodeURIComponent(fullVenue) + '">SAVE TO CALENDAR</a>';
   }
   h += '</section>';
 
@@ -641,7 +676,7 @@ var CONFIG = {
     '<div class="cap">The Setting</div>' +
     '<h2>Wedding Venue</h2>' +
     '<h3>' + esc(C.venueName) + '</h3>' +
-    '<p class="muted">' + esc(C.venueAddress) + '</p>' +
+    '<p class="muted">' + esc(C.venuePostcode + ", " + C.venueCityRegion) + '</p>' +
     '<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(C.mapQuery) + '">VIEW ON GOOGLE MAPS</a>' +
   '</section>';
 
@@ -649,7 +684,7 @@ var CONFIG = {
     '<div class="cap">Kindly Reply</div>' +
     '<h2>Will You Join Us?</h2>' +
     '<p class="rl">' + esc(C.rsvpMessage) + '</p>' +
-    '<div class="rsum"><b>' + esc(fmt(C.weddingDate)) + ' · ' + esc(clock(C.eventTime)) + '</b><span>' + esc(C.venueName) + ', Bradford</span></div>' +
+    '<div class="rsum"><b>' + esc(fmt(C.weddingDate)) + ' · ' + esc(C.eventTimeRange) + '</b><span>' + esc(shortVenueLine) + '</span></div>' +
     '<form id="f">' +
       '<label for="fn">GUEST FULL NAME</label>' +
       '<input id="fn" required autocomplete="name" value="' + esc(guestName) + '" placeholder="Enter your full name">' +
@@ -678,14 +713,13 @@ var CONFIG = {
   h += '<section>' +
     '<div class="motif">' + ornamentSVG + '</div>' +
     '<div class="cap">Save The Date</div>' +
-    '<div class="bigdate">' + esc(big) + '</div>' +
+    '<div class="bigdate">' + esc(big) + '<br><span style="font-size:11px;letter-spacing:.14em">' + esc(C.eventTimeRange.toUpperCase()) + '</span><br><span style="font-size:11px;letter-spacing:.14em">' + esc(shortVenueLine.toUpperCase()) + '</span></div>' +
     '<p style="margin-top:16px">' + esc(C.closing) + '</p>' +
     '<div class="names gold-foil" style="font-size:38px;filter:none">' + esc(C.bride) + ' &amp; ' + esc(C.groom) + '</div>' +
   '</section>';
 
   document.getElementById("app").innerHTML = h;
 
-  // MUSIC CONTROLLER
   var bgm = document.getElementById("bgm");
   var mbtn = document.getElementById("mbtn");
   var micon = document.getElementById("micon");
@@ -712,7 +746,6 @@ var CONFIG = {
     }
   };
 
-  // RSVP FORM HANDLER
   var f = document.getElementById("f"), ty = document.getElementById("ty"), fm = document.getElementById("fm"), yes = document.getElementById("yes"), go = document.getElementById("go"), gc = 1, MG = Math.max(1, +C.rsvpMaxGuests || 10);
   function ans(){ return f.querySelector('input[name="fa"]:checked').value; }
   [].forEach.call(f.querySelectorAll('input[name="fa"]'), function(r){
