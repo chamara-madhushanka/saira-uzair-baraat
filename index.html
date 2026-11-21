@@ -75,16 +75,18 @@ section{
   backdrop-filter:blur(10px);
 }
 
+/* Hero layout tuned for single first names ("Saira" & "Uzair") */
 section.hero{
-  min-height:88vh;
+  min-height:84vh;
   background:
     radial-gradient(circle at 50% 18%, rgba(166, 44, 68, 0.55) 0%, transparent 60%),
     radial-gradient(circle at 50% 50%, #6e1527 0%, #470b18 68%, #2e050e 100%);
   color:#fffaf0;
   border:2px solid var(--gold-light);
   border-radius:210px 210px 28px 28px;
-  padding:54px 22px 42px;
-  justify-content:space-between;
+  padding:46px 22px 34px;
+  justify-content:center;
+  gap:6px;
   box-shadow:
     0 26px 65px rgba(32, 3, 10, 0.65),
     inset 0 0 0 6px #3b0813,
@@ -107,7 +109,7 @@ section.hero > *{position:relative;z-index:1;max-width:100%}
 .hero-crown{
   color:var(--gold-light);
   opacity:0.9;
-  margin-bottom:2px;
+  margin-bottom:0;
   filter:drop-shadow(0 2px 6px rgba(0,0,0,0.4));
 }
 
@@ -132,13 +134,13 @@ section.hero > *{position:relative;z-index:1;max-width:100%}
   font-family:"Amiri",serif;
   font-size:29px;
   font-weight:700;
-  margin:2px 0 6px;
+  margin:0 0 2px;
   filter:drop-shadow(0 2px 8px rgba(0,0,0,0.4));
 }
 
 .guest-pill{
   display:inline-block;
-  padding:6px 22px;
+  padding:5px 20px;
   border:1px solid rgba(235,209,151,0.6);
   border-radius:999px;
   background:linear-gradient(180deg, rgba(255,250,240,0.12), rgba(255,250,240,0.04));
@@ -147,7 +149,7 @@ section.hero > *{position:relative;z-index:1;max-width:100%}
   font-size:18.5px;
   font-weight:600;
   color:var(--gold-light);
-  margin:4px 0 8px;
+  margin:2px 0 4px;
   box-shadow:0 4px 16px rgba(0,0,0,0.22);
 }
 
@@ -172,7 +174,42 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   margin:6px auto;
   max-width:340px;
 }
-.hero .cap{color:var(--gold-light);opacity:0.95}
+.hero .cap{color:var(--gold-light);opacity:0.95;margin:4px auto 2px}
+
+.hero-names-wrap{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin:4px auto;
+  padding:4px 0;
+}
+
+.hero-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:150px;
+  margin:2px auto;
+  opacity:0.75;
+}
+.hero-divider::before,
+.hero-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, transparent, var(--gold-light));
+}
+.hero-divider::after{
+  background:linear-gradient(270deg, transparent, var(--gold-light));
+}
+.hero-divider i{
+  display:block;
+  width:6px;
+  height:6px;
+  transform:rotate(45deg);
+  background:var(--gold-light);
+}
 
 .names{
   font-family:"Great Vibes",cursive;
@@ -182,6 +219,12 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   padding:4px 8px;
   max-width:100%;
   filter:drop-shadow(0 4px 10px rgba(0,0,0,0.45));
+}
+.hero .names{
+  font-size:66px;
+  line-height:1.06;
+  margin:2px auto;
+  padding:2px 12px;
 }
 .names .bridge{
   font-family:"Cormorant Garamond",Georgia,serif;
@@ -195,14 +238,20 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   color:#f9e8c9;
   -webkit-text-fill-color:#f9e8c9;
 }
+.hero .names .bridge{
+  font-size:18.5px;
+  line-height:1.38;
+  margin:8px auto;
+  max-width:280px;
+}
 
 .hero-datebox{
   width:100%;
   max-width:340px;
-  margin:10px auto 0;
+  margin:6px auto 0;
   border-top:1px solid rgba(235,209,151,0.6);
   border-bottom:1px solid rgba(235,209,151,0.6);
-  padding:12px 14px;
+  padding:10px 14px;
   background:linear-gradient(90deg, transparent, rgba(0,0,0,0.24), transparent);
 }
 .hero-datebox .d-main{
@@ -221,7 +270,7 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   letter-spacing:.18em;
   color:#f7e7ce;
   display:block;
-  margin-top:6px;
+  margin-top:4px;
   line-height:1.4;
 }
 
@@ -243,16 +292,16 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
 
 .subvenue{
   font-size:17.5px;
-  line-height:1.4;
+  line-height:1.35;
   color:#f3dec0;
-  margin:10px auto 0;
+  margin:6px auto 0;
   max-width:330px;
   font-style:italic;
   letter-spacing:0.03em;
 }
 
 .scroll-cue{
-  margin:14px auto 0;
+  margin:10px auto 0;
   font-family:"Cinzel",Georgia,serif;
   font-size:9px;
   letter-spacing:.26em;
@@ -618,10 +667,14 @@ var CONFIG = {
     '<div class="bismillah gold-foil">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</div>' +
     '<div class="guest-pill">' + esc(greetingText) + '</div>' +
     '<div class="cap">With the Blessings of Allah</div>' +
-    '<div class="names gold-foil">' +
-      esc(C.bride) +
-      '<span class="bridge">' + esc(C.inviteBridge) + '</span>' +
-      esc(C.groom) +
+    '<div class="hero-names-wrap">' +
+      '<div class="hero-divider"><i></i></div>' +
+      '<div class="names gold-foil">' +
+        'Saira' +
+        '<span class="bridge">' + esc(C.inviteBridge) + '</span>' +
+        'Uzair' +
+      '</div>' +
+      '<div class="hero-divider"><i></i></div>' +
     '</div>' +
     '<div class="hero-datebox">' +
       '<span class="d-main">' + esc(big) + '</span>' +
@@ -852,33 +905,37 @@ var CONFIG = {
 
     var n = document.createElement("div");
     n.className = "names gold-foil";
-    n.appendChild(document.createTextNode(C.bride));
-    var amp = document.createElement("i"); amp.textContent = "as she begins a beautiful new chapter with";
-    amp.className = "bridge";
-    n.appendChild(amp);
-    n.appendChild(document.createTextNode(C.groom));
+    n.innerHTML = 'Saira<span class="bridge">' + esc(C.inviteBridge) + '</span>Uzair';
 
-    var b = document.createElement("button");
-    b.className = "btn";
-    b.type = "button";
-    b.textContent = "OPEN INVITATION";
+    var openBtn = document.createElement("button");
+    openBtn.type = "button";
+    openBtn.className = "btn";
+    openBtn.textContent = "OPEN INVITATION";
+
+    var sub = document.createElement("div");
+    sub.className = "intro-sub";
+    sub.textContent = "Tap to Unfold";
+
+    openBtn.onclick = function(){
+      O.classList.add("open");
+      H.classList.remove("lock");
+      B.classList.add("go");
+      bgm.play().then(function(){
+        setMusicState(true);
+      }).catch(function(){
+        setMusicState(false);
+      });
+      setTimeout(function(){ O.remove(); }, 1250);
+    };
 
     a.appendChild(bis);
     a.appendChild(gb);
     a.appendChild(c);
     a.appendChild(n);
-    a.appendChild(b);
+    a.appendChild(openBtn);
+    a.appendChild(sub);
     O.appendChild(a);
     B.appendChild(O);
-
-    b.onclick = function(){
-      bgm.volume = 0.65;
-      bgm.play().then(function(){ setMusicState(true); }).catch(function(){ setMusicState(false); });
-      O.classList.add("open");
-      H.classList.remove("lock");
-      B.classList.add("go");
-      setTimeout(function(){ O.remove(); }, 1250);
-    };
   }
 })();
 </script>
