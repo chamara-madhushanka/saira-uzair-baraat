@@ -225,16 +225,6 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   margin:2px auto;
   padding:2px 12px;
 }
-.hero .names .hero-amp{
-  font-family:"Cormorant Garamond",Georgia,serif;
-  font-style:italic;
-  font-size:22px;
-  line-height:1.1;
-  display:block;
-  margin:2px auto;
-  color:#f9e8c9;
-  -webkit-text-fill-color:#f9e8c9;
-}
 .names .bridge{
   font-family:"Cormorant Garamond",Georgia,serif;
   font-style:italic;
@@ -246,6 +236,12 @@ h3{font-size:16px;letter-spacing:.12em;margin:0 0 6px;color:var(--rose)}
   max-width:300px;
   color:#f9e8c9;
   -webkit-text-fill-color:#f9e8c9;
+}
+.hero .names .bridge{
+  font-size:18.5px;
+  line-height:1.38;
+  margin:8px auto;
+  max-width:280px;
 }
 
 .closing-names{
@@ -561,6 +557,16 @@ body.go .hero>*:nth-child(8){animation-delay:1.15s}
   box-shadow:none;
 }
 .ia .names{font-size:42px;margin:6px 0;filter:none}
+.ia .names .intro-amp{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-style:italic;
+  font-size:18px;
+  line-height:1.1;
+  display:block;
+  margin:2px auto;
+  color:var(--rose);
+  -webkit-text-fill-color:var(--rose);
+}
 .ia .names .bridge{
   font-size:16px;
   color:var(--rose);
@@ -692,7 +698,7 @@ var CONFIG = {
       '<div class="hero-divider"><i></i></div>' +
       '<div class="names gold-foil">' +
         'Saira' +
-        '<span class="hero-amp">&amp;</span>' +
+        '<span class="bridge">' + esc(C.inviteBridge) + '</span>' +
         'Uzair' +
       '</div>' +
       '<div class="hero-divider"><i></i></div>' +
@@ -927,7 +933,7 @@ var CONFIG = {
 
     var n = document.createElement("div");
     n.className = "names gold-foil";
-    n.innerHTML = 'Saira<span class="bridge">' + esc(C.inviteBridge) + '</span>Uzair';
+    n.innerHTML = 'Saira<span class="intro-amp">&amp;</span>Uzair';
 
     var openBtn = document.createElement("button");
     openBtn.type = "button";
